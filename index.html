@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犹太文明课程创意作业展示 | Jewish Civilization Creative Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-blue: #1e3c72;
+            --secondary-blue: #2a5298;
+            --accent-gold: #d4af37;
+            --light-gold: #f0d37a;
+            --dark-bg: #0a1525;
+            --card-bg: #162336;
+            --light-text: #f5f5f5;
+            --muted-text: #b0b8c5;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --transition: all 0.4s ease;
+            --border-radius: 12px;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 400;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(30, 60, 114, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 20%);
+        }
+        
+        /* 封面页样式 */
+        .cover-page {
+            height: 100vh;
+            background: 
+                linear-gradient(135deg, rgba(10, 21, 37, 0.85) 0%, rgba(30, 60, 114, 0.75) 100%), 
+                url('https://youimg1.c-ctrip.com/target/100h160000010n7h25CA5.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            position: relative;
+            transition: opacity 1.2s ease;
+            overflow: hidden;
+        }
+        
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .cover-content {
+            max-width: 900px;
+            z-index: 2;
+            animation: fadeInUp 1.5s ease;
+        }
+        
+        .cover-title {
+            font-size: 4.2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            position: relative;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .cover-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 25px auto;
+            border-radius: 2px;
+        }
+        
+        .cover-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 60px;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+            line-height: 1.8;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .explore-btn {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            letter-spacing: 1px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .explore-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gold);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .explore-btn:hover {
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .explore-btn:hover::before {
+            left: 0;
+        }
+        
+        /* 内容页样式 */
+        .content-page {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+            padding: 80px 20px;
+            background-color: var(--dark-bg);
+        }
+        
+        .content-page.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 70px;
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '✡';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 4rem;
+            opacity: 0.08;
+            transform: rotate(15deg);
+        }
+        
+        .page-header::after {
+            content: '✡';
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-size: 4rem;
+            opacity: 0.08;
+            transform: rotate(-15deg);
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .page-subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--accent-gold);
+            transition: transform 0.7s ease;
+        }
+        
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+        
+        .project-content {
+            padding: 30px;
+        }
+        
+        .project-title {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: var(--light-gold);
+            font-weight: 600;
+            line-height: 1.3;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .project-author {
+            font-size: 1.05rem;
+            color: var(--muted-text);
+            margin-bottom: 20px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            min-height: 45px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+        
+        .project-author i {
+            margin-right: 10px;
+            color: var(--secondary-blue);
+        }
+        
+        .project-description {
+            margin-bottom: 25px;
+            color: var(--muted-text);
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 10px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        .project-description::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .project-description::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 10px;
+        }
+        
+        .english-translation {
+            font-size: 0.85rem;
+            color: rgba(176, 184, 197, 0.7);
+            font-style: italic;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            line-height: 1.6;
+        }
+        
+        .project-video {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .project-video:hover {
+            background: var(--accent-gold);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .project-video i {
+            margin-right: 8px;
+        }
+        
+        /* 评论区样式 */
+        .comments-section {
+            margin-top: 100px;
+            padding: 60px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .comments-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            text-align: center;
+            color: var(--light-gold);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .comment-form {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--light-gold);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--light-text);
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .submit-btn:hover {
+            background: var(--accent-gold);
+            color: var(--dark-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .comments-list {
+            margin-top: 50px;
+        }
+        
+        .comment {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            margin-bottom: 25px;
+            border-left: 3px solid var(--accent-gold);
+            transition: var(--transition);
+        }
+        
+        .comment:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .comment-author {
+            font-weight: 600;
+            color: var(--light-gold);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .comment-date {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+        
+        .comment-text {
+            line-height: 1.7;
+            color: var(--light-text);
+            margin-bottom: 10px;
+        }
+        
+        .comment-translation {
+            font-size: 0.85rem;
+            color: rgba(176, 184, 197, 0.7);
+            font-style: italic;
+            line-height: 1.6;
+        }
+        
+        /* 联系方式部分 */
+        .contact-section {
+            margin-top: 100px;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: var(--light-gold);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .contact-item i {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+        }
+        
+        .contact-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .contact-item p {
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            padding: 40px;
+            color: var(--muted-text);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        /* 返回按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(30, 60, 114, 0.4);
+            transition: var(--transition);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            font-size: 1.2rem;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(30, 60, 114, 0.5);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .cover-title {
+                font-size: 2.8rem;
+            }
+            
+            .cover-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .comments-section {
+                padding: 40px 20px;
+            }
+            
+            .comment-form {
+                padding: 30px 20px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 封面页 -->
+    <section class="cover-page" id="coverPage">
+        <div class="cover-content">
+            <h1 class="cover-title">犹太文明课程创意作业展示</h1>
+            <p class="cover-subtitle">《全球视野下的犹太文明》课程学生创意作品集 - 探索犹太文化与中华文化的交融</p>
+            <button class="explore-btn" id="exploreBtn">开始探索</button>
+        </div>
+    </section>
+    
+    <!-- 内容页 -->
+    <section class="content-page" id="contentPage">
+        <div class="container">
+            <header class="page-header">
+                <h1 class="page-title">学生创意作品展示</h1>
+                <p class="page-subtitle">来自北京大学、清华大学等高校学生的精彩创意作品，融合犹太文化与中国传统工艺</p>
+            </header>
+            
+            <div class="projects-grid">
+                <!-- 项目1 -->
+                <div class="project-card fade-in">
+                    <img src="images/001.webp" alt="编织犹太娃娃" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">编织犹太娃娃 Knitted Jewish Doll</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学信息科学与技术学院本科生、蒙古国留学生 Enkh-Ujin Natsagdorj 恩慧同学</p>
+                        <div class="project-description">
+                            <p>在《全球视野下的犹太文明》课程中，我系统学习了犹太文化，对他们的服饰传统特别感兴趣。为了把学到的知识表现出来，我决定亲手做一个犹太男性毛线娃娃。我仔细还原了传统服饰的细节，比如小圆帽、黑色外套和鬓角发型。我想用这种可爱直观的手工作品，展示我对犹太服饰文化的理解，也探索传统和现代手工结合的可能。</p>
+                            <div class="english-translation">
+                                In this Jewish civilization course, I learned a lot about Jewish culture and got really interested in their clothing traditions. To show what I learned, I decided to make a wool doll of a Jewish man by hand. I carefully recreated details of the traditional clothing, like the kippah, black coat, and side curls. I wanted to use this cute and clear handmade project to share my understanding of Jewish clothing culture and explore how to mix traditional culture with modern crafts.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1F6UABYE9P/?share_source=copy_web&vd_source=30b314ba4283e8e1fb29717bd58e874d" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目2 -->
+                <div class="project-card fade-in">
+                    <img src="images/002.png" alt="千面晷" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">千面晷 The Thousand-Faced Sundial</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 清华大学法学院本科生 许昕月同学</p>
+                        <div class="project-description">
+                            <p>用时钟来表示犹太民族这些年来发展的历程与文化底蕴，时针与分针的转动也恰恰标志着整个民族的生生不息，坚韧持重。作为一个创意作业，我首先希望自己能够做出一个实用的小装置，其次是能够蕴含该文化的深刻力量。考虑到我有激光雕刻的技术经验，于是选择DIY犹太文化钟表。该钟表一共耗时约3天制成，中间因为等待材料邮寄、雕刻尺寸误差等有过返工，好在最后按时完成，根据老师的建议又将原木色的钟表进行了上色，用白胶黏上彩砂后的钟表更加具有民族文化风情，图案也更加明媚。</p>
+                            <div class="english-translation">
+                                This clock symbolizes the long course of Jewish history and its rich cultural heritage. The constant movement of the hour and minute hands reflects the resilience and vitality of the Jewish people. As a creative project, my initial goal was to design a practical device while also embedding it with profound cultural meaning. Given my prior experience with laser engraving, I decided to create a DIY Jewish cultural clock. The entire production took about three days, including time lost to material delivery delays and engraving errors that required rework. Fortunately, the project was completed on schedule. Following my instructor's advice, I later added color to the original wooden clock. By applying white glue and colored sand, the clock took on a brighter and more vibrant appearance, bringing out the cultural essence of its motifs.
+                            </div>
+                        </div>
+                        <a href="https://youtu.be/I3ZPJ26vVCw" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目3 -->
+                <div class="project-card fade-in">
+                    <img src="images/003.webp" alt="金焰流光" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">金焰流光 Golden Flame Radiance</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学信息科学技术学院本科生 邱显童同学</p>
+                        <div class="project-description">
+                            <p>本作品采用中国非物质文化遗产——掐丝珐琅工艺，制作犹太文化中极具代表性的九烛台。其蕴含的"光明"与"希望"主题，与中华文化中追求美好、向往光明的精神高度契合。掐丝珐琅工艺独特的金属丝线轮廓和彩砂颗粒质感，不仅能精致地表现烛台的造型，其材质本身（金丝与矿物砂），也赋予了作品一种永恒感和神圣感，与主题的庄重性相得益彰。作品背景采用犹太文化的标志性蓝白色调。如同蓝天下的火焰，象征着光明不息。这件作品不仅是一件装饰品，更是一座文化交流的桥梁。无论来自何种文化背景，人类对光明、团结与奇迹的信仰是相通的。</p>
+                            <div class="english-translation">
+                                This piece employs the Chinese intangible cultural heritage of cloisonné craftsmanship to create the highly symbolic Jewish Menorah. Its themes of "light" and "hope" resonate deeply with the Chinese cultural spirit of pursuing beauty and aspiring toward illumination. The distinctive metal wire outlines and granular texture of colored sand in cloisonné work not only exquisitely capture the form of the Hanukkiah but also, through the materials themselves (gold wires and mineral sands), imbue the artwork with a sense of timelessness and sanctity that complements the solemnity of its theme. The background adopts the iconic blue and white tones of Jewish culture. Like flames against a blue sky, it symbolizes the eternal nature of light. More than merely a decorative object, this work serves as a bridge for cultural exchange. Regardless of cultural background, humanity's faith in light, unity, and miracles is universally shared.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1dwz6YGEhg/?spm_id_from=333.1387.upload.video_card.click" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目4 -->
+                <div class="project-card fade-in">
+                    <img src="images/004.webp" alt="破碎的玻璃与永恒的誓言" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">破碎的玻璃与永恒的誓言 Broken Glass and Eternal Vows</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学中国语言文学系本科生、日本留学生渡边同学</p>
+                        <div class="project-description">
+                            <p>在杨梦老师开设的《全球视野下的犹太文明》课堂上，一堂关于"犹太婚礼"的讲解彻底点燃了我的创作灵感。那些我从没有听说过的仪式深深吸引了我，于是我一个大胆的想法萌生了——我要亲手复刻一个犹太婚礼现场的模型！我的创作始于场景的搭建，我将犹太讲堂的图片作为新郎新娘所面对的背景，并依据杨梦老师的ppt里展示的婚礼现场，用手工用草和手工用花装饰了天花板与四周，营造出那种幸福又正式的氛围。</p>
+                            <div class="english-translation">
+                                During Professor YANG Meng's course "Jewish Civilization in a Global Context," a lecture on Jewish weddings sparked my creative inspiration. I was captivated by the rituals I had never heard of before, and a bold idea emerged: I wanted to personally recreate a model of a "Jewish wedding scene." My creation began with the stage set. I used a picture of a synagogue as the backdrop for the bride and groom. Based on the wedding scene presented in Professor Yang Meng's PowerPoint presentation, I decorated the ceiling and surroundings with handmade grass and flowers, creating a happy yet formal atmosphere.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV11ZG1zWEyL/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7b84d223896def0f82b264b4ab07459f" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目5 -->
+                <div class="project-card fade-in">
+                    <img src="images/005.webp" alt="摩托骑行以色列" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">摩托骑行以色列 Motorcycle Ride in Israel</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学工学院机器人工程专业本科生刘思哲同学</p>
+                        <div class="project-description">
+                            <p>在《全球视野下的犹太文明》课堂上，我见到了许多以色列地图，尤其不同的边界。在历史进程中，这些边界不断变化，边界上也发生了许多对以色列而言极为重要的事件。然而，由于身在国内，我无法亲自前往以色列观察和体验这些边界。于是，我产生了一个想法：能不能在我身边，通过摩托骑行来感受以色列的边界？基于这样的思考，我设计了这份创意作业。</p>
+                            <div class="english-translation">
+                                In our course "Jewish Civilization in a Global Context", I encountered many maps of Israel with different borders. Over the course of history, these borders have been constantly changing, and many significant events for Israel have taken place along them. However, since I am in China, I do not have the opportunity to visit Israel in person and experience its borders directly. This led me to an idea: Can I use my motorcycle to ride in my local surroundings to simulate and experience the scale of Israel's borders? It was from this thought that I developed this creative assignment.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV12nL3zaEvc/?share_source=copy_web&vd_source=63811638af68b90f8b57e67e881b8cb3" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目6 -->
+                <div class="project-card fade-in">
+                    <img src="images/006.webp" alt="当城小环走进犹太文明" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">当城小环走进犹太文明 When Cheng Xiaohuan Meets Jewish Civilization</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学城市与环境学院本科生刘康依同学</p>
+                        <div class="project-description">
+                            <p>图案设计的灵感来源于杨梦老师的微信头像。杨老师通过墙上的画作与艺术大师们对话，而我们也同样追随杨老师的目光了解犹太这个遥远而陌生的民族，所以我模仿杨老师的微信头像的构图在左下角放上了杨老师的卡通背影。城小环是北京大学城市与环境学院的吉祥物，代表着学院学生的形象。站在七枝烛台下、头戴基帕的城小环恰好象征了我和其他正在学习犹太文明的城环学子。</p>
+                            <div class="english-translation">
+                                The inspiration for this design draws from the WeChat avatar of Professor YANG Meng. Professor YANG engages in a dialogue with great artists through the paintings on the wall, and we, too, follow her gaze to learn about the Jewish people——a distant and unfamiliar nation. Thus, I emulated the composition of Professor Yang's WeChat avatar by placing a cartoon-style view of her in the bottom left corner. "Cheng Xiaohuan" is the mascot of the College of Urban and Environmental Sciences （CUES） at Peking University, representing the image of the college's students. Standing beneath the seven-branched menorah and wearing a kippah, Cheng Xiaohuan symbolizes me and other students from CUES who are studying Jewish civilization.
+                            </div>
+                        </div>
+                        <a href="https://b23.tv/I0aN8Ho" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目7 -->
+                <div class="project-card fade-in">
+                    <img src="images/007.webp" alt="纸壳板上的犹太会堂" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">纸壳板上的犹太会堂 Synagogue on Cardboard</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学中国语言文学系本科生、韩国留学生郑瑞瑛同学</p>
+                        <div class="project-description">
+                            <p>在《全球视野下的犹太文明》课程的创意作业中，我以捷克皮尔森（Plzen）的犹太大会堂为蓝本，制作了纸壳板艺术模型。这座犹太会堂是欧洲最大的犹太会堂之一，也是世界第三大犹太会堂。会堂建于 19 世纪末，是摩尔复兴式建筑的杰出代表。它既是犹太社区的宗教中心，也是犹太文化和历史的重要见证，其独特的建筑风格与深厚的历史背景深深吸引了我，成为我探索犹太文化与艺术的起点。</p>
+                            <div class="english-translation">
+                                For my creative project in the course Jewish Civilization in a Global Context, I was inspired by the Great Synagogue in Plzen, Czech Republic. This synagogue is one of the largest in Europe and the third largest in the world. Built in the late 19th century, it stands as an outstanding example of Moorish Revival architecture. As both a religious center for the Jewish community and a testament to Jewish history and culture, its unique architectural style and profound historical background deeply attracted me and became the starting point of my exploration into Jewish culture and art.
+                            </div>
+                        </div>
+                        <a href="https://b23.tv/Ob3Ry2t" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目8 -->
+                <div class="project-card fade-in">
+                    <img src="images/008.webp" alt="犹太风情摄影棚" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">犹太风情摄影棚 Jewish Photobooth Props</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学国际关系学院国际政治本科生、马来西亚留学生张意婷同学</p>
+                        <div class="project-description">
+                            <p>我一直对通过艺术和手工分享知识的方式感到好奇，这就是我产生创建【犹太风情摄影棚】的思路。在制作哈姆萨、羊角号和门柱匣等犹太文化拍照道具的过程中，我不仅锻炼了创造力，也体会到了其中的深刻意义。通过动手再现这些文化符号，我把课堂知识转化为具体的作品，更加感受到犹太传统的厚重与魅力。这一过程也让我能通过艺术表达对文化的尊重与好奇。</p>
+                            <div class="english-translation">
+                                I've always been curious to share my knowledge through arts & crafts, which is why I landed on the idea of creating "Jewish Photobooth Props". Designing props such as the Hamsa, Shofar, and Mezuzah was both a creative and meaningful process. Through crafting these symbols, I was able to engage with Jewish culture in a hands-on way, transforming course knowledge into something tangible. The process deepened my appreciation for the richness of tradition and allowed me to express respect and curiosity through art.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1CZUUYMEga/" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目9 -->
+                <div class="project-card fade-in">
+                    <img src="images/009.webp" alt="犹太特色哈拉面包灯" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">犹太特色哈拉面包灯 Jewish Challah Bread Lamp</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学新闻与传播学院本科生方禹琪同学</p>
+                        <div class="project-description">
+                            <p>Challah是犹太安息日所必备的食物，多呈现辫子状；而至新年之时，会专门食用圆形的Challah，象征新年的开始。这样的独特性与限时性的饮食，缩影着一部分的犹太文化。选择制作Challah面包灯，首先是源于我个人对于烘焙的兴趣。从整个面包的纹路来看，Challah的重点并非是在于面包的发酵，而在于辫子形状的编织。因此，很想上手一探究竟——辫子是怎么编的如此紧实且丰满。</p>
+                            <div class="english-translation">
+                                Challah is an essential food for the Jewish Sabbath, mostly in the shape of a braid. During the Jewish New Year, a special round Challah is eaten, symbolizing the start of the new year. Such a unique and time-specific food epitomizes a part of Jewish culture. My choice to make a Challah bread lamp first stems from my personal interest in baking. Regarding the texture of the bread, the key to Challah lies not in its fermentation, but in the braiding of its shape. Therefore, I was eager to try it out and figure out how the braids are made so tight and plump.
+                            </div>
+                        </div>
+                        <a href="https://b23.tv/7ItrYUf" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目10 -->
+                <div class="project-card fade-in">
+                    <img src="images/010.png" alt="3D塑韵犹太烛台" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">3D塑韵犹太烛台 3D Printed Menorah</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 清华大学新雅书院本科生曹亚奇同学</p>
+                        <div class="project-description">
+                            <p>在《犹太文明》课程中，我深受犹太文化中象征主义与坚韧精神的启发，决定通过3D打印技术制作一座九臂烛台模型。九臂烛台作为犹太文化的重要符号，不仅承载着光明与希望的寓意，还体现了犹太民族在历史长河中对信仰的坚守。选择3D打印技术，是因为它能精准还原烛台繁复的纹饰与对称结构，同时赋予模型坚固耐用的特性，便于长期展示。</p>
+                            <div class="english-translation">
+                                In the course "Jewish Civilization," I was deeply inspired by the symbolism and resilience of Jewish culture, leading me to create a nine-branched hanukkiah model using 3D printing technology. As a significant symbol of Jewish culture, the menorah represents light and hope, reflecting the Jewish people's enduring faith throughout history. I chose 3D printing for its ability to accurately replicate the intricate patterns and symmetrical structure of the menorah while ensuring durability for long-term display.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV16rjdzSE8K/" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目11 -->
+                <div class="project-card fade-in">
+                    <img src="images/011.png" alt="Hamsa之手" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">Hamsa之手 Hamsa Hand</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学数学与科学学院本科生耿依涵同学</p>
+                        <div class="project-description">
+                            <p>Hamsa之手在希伯来语中称为"Hamesh Hand"，是犹太文化中的护身符，如今有许多以其为灵感的饰品、挂件。Hamsa之手被认为是对抗"邪恶之眼"的工具，也有人认为这与上帝将人们带出埃及的"strong hand"有关。在作业中，我自己设计了一个Hamsa之手，并将其刻制成橡皮章。在设计时，我参考了网络上的样式，并加入了许多犹太元素。</p>
+                            <div class="english-translation">
+                                The Hamsa hand, known in Hebrew as the "Hamesh Hand", is a protective amulet in Jewish culture. Today, many ornaments and pendants are inspired by this symbol. The Hamsa hand is believed to ward off the "evil eye", and some also associate it with God's "strong hand" that brought the Israelites out of Egypt.For this assignment, I designed my own version of the Hamsa hand and carved it into a rubber stamp. In the design, I drew inspiration from patterns I found online while incorporating numerous Jewish elements.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1T3UjYnEcF/" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目12 -->
+                <div class="project-card fade-in">
+                    <img src="images/012.webp" alt="安妮的秘密小屋" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">安妮的秘密小屋 Anne's Secret Annex</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学中国语言文学系本科生许晋懿同学</p>
+                        <div class="project-description">
+                            <p>本作品是基于我对《安妮日记》的阅读理解和体验制作的创意手工。作为二战期间对纳粹屠犹的反人类罪行的第一手记录，也作为一位善良乐观的少女曾在世上活过的的痕迹，《安妮日记》被选入了教育部推荐阅读书目，我由此接触到了这本书。初读《安妮日记》时我还在上小学，对二战历史和纳粹屠犹罪行一知半解，但却切身地体会到了被迫与大自然隔绝的痛苦。</p>
+                            <div class="english-translation">
+                                This creative work is based on my reading and personal reflection on The Diary of Anne Frank.As a firsthand account of the anti-humanity atrocities committed by the Nazis during World War II, and as traces of a kind and optimistic young girl who once lived in this world, The Diary of Anne Frank has been included in the Ministry of Education's recommended reading list. It was through this recommendation that I first encountered the book. I read it initially during elementary school, at a time when my understanding of World War II history and the Holocaust was still vague. Though I struggled to fully empathize with the experiences described, I could deeply relate to the pain of being forcibly cut off from nature.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1mtzGYDE95/?spm_id_from=333.999.0.0&vd_source=29c626aa51b94c593c8cea84b42ae108" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目13 -->
+                <div class="project-card fade-in">
+                    <img src="images/013.webp" alt="当〈文明6〉与以色列相遇" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">当〈文明6〉与以色列相遇 When Civilization VI Meets Israel</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学数学科学学院本科生陈秋阳同学</p>
+                        <div class="project-description">
+                            <p>在《全球视野下的犹太文明》课程中，我以《文明6》为载体，尝试把古代以色列的精神传统与现代国家经验转化为可交互的规则体系。文明能力"出埃及记"以迁徙与坚忍为主题，映射为更强的机动与荒漠适应；特色单位"马加比勇士"以信仰激励的集结与英勇抗争为意象，体现在以信仰招募与更高近战能力上；独特建筑"犹太会堂"承接宗教---教育---社群的历史角色，被设计为持续贡献科技、文化与多类伟人点数的核心引擎。</p>
+                            <div class="english-translation">
+                                In the course "Jewish Civilization in a Global Context," I use Civilization VI as a medium to translate the spiritual legacy of ancient Israel and the experience of the modern state into an interactive ruleset. The civilization ability, Exodus, centers on migration and perseverance, realized as greater mobility and stronger desert adaptation. The unique unit, Maccabean Warriors, embodies faith-driven mobilization and courageous resistance, represented by Faith-based recruitment and higher melee strength. The unique building, the Synagogue, inherits its historical role across religion, education, and community, designed to steadily generate Science, Culture, and diverse Great Person points as a city's cultural--intellectual engine.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1omzvYNE95/?share_source=copy_web&vd_source=e8a23bd3370cf7bdd6646d9b6150c2e3" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+                
+                <!-- 项目14 -->
+                <div class="project-card fade-in">
+                    <img src="images/014.webp" alt="耶路撒冷之夜" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">耶路撒冷之夜 Jerusalem Night</h2>
+                        <p class="project-author"><i class="fas fa-user"></i> 北京大学国际关系学院本科生、俄罗斯留学生Timur Mansurov同学</p>
+                        <div class="project-description">
+                            <p>在课堂上，杨梦老师曾介绍过光明节，我也看到过往同学们的各种创意作品，其中不少优秀的 DIY 作品给了我很大启发。这让我想到，是否也可以通过艺术的方式来表达自己对犹太文化的理解。为此，我在网络上搜集了大量相关图片，并从中挑选合适的元素，最终确定了一幅完整的设计。考虑到 tufting 工艺的特点，我优先选择了色块较大、线条简洁的图案，这样更能呈现理想的效果。</p>
+                            <div class="english-translation">
+                                Professor YANG Meng introduced Hanukkah in our course, and I also saw many creative works from previous students. A number of impressive DIY projects inspired me to think about whether I could also use art as a way to express my understanding of Jewish culture. To achieve this, I searched online for a large number of related images and selected suitable elements, eventually finalizing a complete design. Considering the characteristics of tufting, I prioritized patterns with larger color blocks and simpler lines, which would produce a better final result.
+                            </div>
+                        </div>
+                        <a href="https://www.bilibili.com/video/BV1SkBtYaEHR/?vd_source=cd9c18403b75007e7e8749f8288b56b2" class="project-video" target="_blank"><i class="fas fa-play-circle"></i> 观看视频</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 评论区 -->
+            <div class="comments-section">
+                <h2 class="comments-title">评论区</h2>
+                
+                <div class="comment-form">
+                    <h3>发表评论</h3>
+                    <div class="form-group">
+                        <label for="comment-name">姓名</label>
+                        <input type="text" id="comment-name" class="form-control" placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-email">邮箱</label>
+                        <input type="email" id="comment-email" class="form-control" placeholder="请输入您的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">评论内容</label>
+                        <textarea id="comment-text" class="form-control" placeholder="请分享您的想法..."></textarea>
+                    </div>
+                    <button class="submit-btn" id="submit-comment">提交评论</button>
+                </div>
+                
+                <div class="comments-list" id="comments-list">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">张明</span>
+                            <span class="comment-date">2025-03-15</span>
+                        </div>
+                        <div class="comment-text">
+                            这些作品展现了学生们的创意和对犹太文化的深刻理解，令人印象深刻！
+                        </div>
+                        <div class="comment-translation">
+                            These works showcase students' creativity and deep understanding of Jewish culture, very impressive!
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span class="comment-author">李华</span>
+                            <span class="comment-date">2025-03-10</span>
+                        </div>
+                        <div class="comment-text">
+                            特别喜欢金焰流光作品，将中国传统工艺与犹太文化符号完美结合。
+                        </div>
+                        <div class="comment-translation">
+                            I particularly like the Golden Flame Radiance work, which perfectly combines traditional Chinese craftsmanship with Jewish cultural symbols.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 联系方式部分 -->
+            <div class="contact-section">
+                <h2 class="contact-title">联系我们</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>创课教授</h3>
+                        <p>杨梦</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>联系邮箱</h3>
+                        <p>allshallpass@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <h3>课程公众号</h3>
+                        <p>aibeida</p>
+                    </div>
+                </div>
+            </div>
+            
+            <footer>
+                <p>《全球视野下的犹太文明》课程创意作业展示 © 2025 北京大学</p>
+            </footer>
+        </div>
+        
+        <!-- 返回顶部按钮 -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const exploreBtn = document.getElementById('exploreBtn');
+            const coverPage = document.getElementById('coverPage');
+            const contentPage = document.getElementById('contentPage');
+            const backToTop = document.getElementById('backToTop');
+            const submitCommentBtn = document.getElementById('submit-comment');
+            const commentsList = document.getElementById('comments-list');
+            
+            // 点击"开始探索"按钮
+            exploreBtn.addEventListener('click', function() {
+                // 淡出封面页
+                coverPage.style.opacity = '0';
+                
+                // 延迟显示内容页
+                setTimeout(function() {
+                    coverPage.style.display = 'none';
+                    contentPage.classList.add('active');
+                    
+                    // 添加卡片动画
+                    const cards = document.querySelectorAll('.project-card');
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('fade-in');
+                        }, index * 150);
+                    });
+                }, 800);
+            });
+            
+            // 返回顶部功能
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('active');
+                } else {
+                    backToTop.classList.remove('active');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // 添加卡片悬停效果
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // 评论提交功能
+            submitCommentBtn.addEventListener('click', function() {
+                const name = document.getElementById('comment-name').value;
+                const email = document.getElementById('comment-email').value;
+                const text = document.getElementById('comment-text').value;
+                
+                if (!name || !email || !text) {
+                    alert('请填写所有字段');
+                    return;
+                }
+                
+                // 创建新评论
+                const newComment = document.createElement('div');
+                newComment.className = 'comment';
+                newComment.innerHTML = `
+                    <div class="comment-header">
+                        <span class="comment-author">${name}</span>
+                        <span class="comment-date">${new Date().toISOString().split('T')[0]}</span>
+                    </div>
+                    <div class="comment-text">${text}</div>
+                    <div class="comment-translation">
+                        [English translation would appear here for bilingual comments]
+                    </div>
+                `;
+                
+                // 添加到评论列表顶部
+                commentsList.prepend(newComment);
+                
+                // 清空表单
+                document.getElementById('comment-name').value = '';
+                document.getElementById('comment-email').value = '';
+                document.getElementById('comment-text').value = '';
+                
+                // 显示成功消息
+                alert('评论提交成功！');
+            });
+        });
+    </script>
+</body>
+</html>
